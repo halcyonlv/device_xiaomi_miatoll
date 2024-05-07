@@ -62,9 +62,6 @@ function blob_fixup() {
         vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc)
             sed -i "s/4\.0/4\.1/g" "${2}"
             ;;
-        vendor/etc/libnfc-nci.conf)
-            sed -i "s/\/data\/nfc/\/data\/vendor\/nfc/g" "${2}"
-            ;;
         vendor/lib64/camera/components/com.qti.node.watermark.so)
             grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
