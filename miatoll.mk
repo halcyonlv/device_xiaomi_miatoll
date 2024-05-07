@@ -413,7 +413,7 @@ PRODUCT_BOOT_JARS += \
 $(call soong_config_set,thermal_hal_feature,pid,apply_1_0)
 
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.pixel \
+    android.hardware.thermal-service.pixel \
     thermal_symlinks
 
 PRODUCT_COPY_FILES += \
