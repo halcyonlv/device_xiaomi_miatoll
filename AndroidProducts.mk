@@ -6,8 +6,3 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/genesis_miatoll.mk
-
-COMMON_LUNCH_CHOICES := \
-    genesis_miatoll-ap1a-user \
-    genesis_miatoll-ap1a-userdebug \
-    genesis_miatoll-ap1a-eng
