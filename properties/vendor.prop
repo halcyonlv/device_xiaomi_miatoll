@@ -226,6 +226,9 @@ ro.audio.spatializer_enabled=true
 ro.audio.spatializer_transaural_enabled_default=false
 persist.vendor.audio.spatializer.speaker_enabled=true
 
+# Subsystem Restart
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
 # USB
 vendor.usb.controller=a600000.dwc3
 vendor.usb.device=a600000.ssusb
