@@ -173,6 +173,10 @@ ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
 # DRM
 drm.service.enabled=true
 
+# Fingerprint
+ro.vendor.fingerprint.type=side
+ro.vendor.fingerprint.sensor_location=1080|760|100|local:4630947024726438529
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
