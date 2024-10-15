@@ -85,6 +85,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "/^service/! s/wfdservice$/wfdservice64/g" "${2}"
             ;;
+        vendor/lib64/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+            ;;
         # Remove dependency on android.hidl.base@1.0 for WFD native library.
         system_ext/lib64/libwfdnative.so)
             [ "$2" = "" ] && return 0
