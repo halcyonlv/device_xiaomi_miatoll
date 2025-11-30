@@ -4,6 +4,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SM6250Aperture",
+    name: "CarrierConfigOverlayMiatoll",
+    aaptflags: ["--keep-raw-values"],
     product_specific: true,
 }

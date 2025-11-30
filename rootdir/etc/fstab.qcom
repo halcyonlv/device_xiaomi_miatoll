@@ -29,7 +29,7 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-#<src>                                                 <mnt_point>               <type>  <mnt_flags and options>                            <fs_mgr_flags>
+#<src>                                                 <mnt_point>              <type>  <mnt_flags and options>                              <fs_mgr_flags>
 system                                                  /system                  ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,avb=vbmeta_system,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 system_ext                                              /system_ext              ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,avb
 product                                                 /product                 ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,avb
@@ -46,6 +46,7 @@ vendor                                                  /vendor                 
 /dev/block/bootdevice/by-name/persist                   /mnt/vendor/persist      ext4    noatime,nosuid,nodev,barrier=1                       wait,check
 /dev/block/bootdevice/by-name/bluetooth                 /vendor/bt_firmware      vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait
 /devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto*     /storage/usbotg    vfat    nosuid,nodev         wait,voldmanaged=usbotg:auto
+
 # Need to have this entry in here even though the mount point itself is no longer needed.
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
