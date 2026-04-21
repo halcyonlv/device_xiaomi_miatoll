@@ -179,8 +179,6 @@ PRODUCT_PACKAGES += \
     ApertureOverlayMiatoll \
     CarrierConfigOverlayMiatoll \
     FrameworkOverlayMiatoll \
-    LineageDialerOverlayMiatoll \
-    LineageSDKOverlayMiatoll \
     SystemUIOverlayMiatoll \
     TelephonyOverlayMiatoll \
     WifiOverlayMiatoll
